@@ -9,6 +9,6 @@ class Roles extends Model
     protected $table = 'role';
     public $timestamps = false;
     protected $fillable = [
-        'name',
+        'name'
     ];
 }

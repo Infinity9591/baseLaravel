@@ -10,5 +10,18 @@ class Users extends Model
 
     public $timestamps = false;
 
+    protected $fillable = [
+        'name',
+        'phone_number',
+        'email',
+        'address',
+    ];
 
+    protected $casts = [
+        'id' => 'string',
+    ];
+
+    public function account(){
+        return $this->belongsTo(Accounts::class, 'account_id');
+    }
 }
