@@ -11,10 +11,10 @@ class RolesController extends Controller
     public function index()
     {
         try {
-//            $roles = Roles::all();
-//            return response()->json($roles, 200);
+            $roles = Roles::all();
+            return response()->json($roles, 200);
 
-            return response()->json(DB::select('SHOW TABLES'));
+//            return response()->json(DB::select('SHOW TABLES'));
         } catch (\Throwable $th) {
             return response()->json("error", 400);
         }
