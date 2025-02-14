@@ -6,7 +6,7 @@ use App\Models\Roles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class RolesController extends Controller
+class RoleController extends Controller
 {
     public function index()
     {

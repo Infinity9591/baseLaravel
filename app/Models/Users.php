@@ -15,7 +15,9 @@ class Users extends Model
         'phone_number',
         'email',
         'address',
+        'account_id'
     ];
+
 
     protected $casts = [
         'id' => 'string',

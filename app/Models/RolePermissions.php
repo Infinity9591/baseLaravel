@@ -11,7 +11,9 @@ class RolePermissions extends Model
     protected $fillable = [
         'table_name',
         'password_hash',
-        'is_active'
+        'is_active',
+        'role_id',
+        'permission_id',
     ];
 
     public function role(){

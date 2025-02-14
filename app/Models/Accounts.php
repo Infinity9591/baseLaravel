@@ -11,10 +11,16 @@ class Accounts extends Model
     protected $fillable = [
         'username',
         'password_hash',
-        'is_active'
+        'is_active',
+        "role_id"
+    ];
+
+    protected $hidden = [
+        'password_hash',
     ];
 
     public function role(){
         return $this->belongsTo(Roles::class, 'role_id');
     }
+
 }
