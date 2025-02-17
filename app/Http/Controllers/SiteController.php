@@ -22,9 +22,10 @@ class SiteController extends Controller
             else {
                 if (password_verify(request('password'),  $account->password_hash)){
                     $payload = ['id' => $account->id, 'username' => $account->username];
-                    $token = JwtHelper::createToken($payload, 3600);
-//                    return response()->json(['token' => $token], 200);
+                    $token = JWTHelper::createToken($payload, 3600);
                     return response()->json(['message' => 'Success', 'token'=>$token, 'user' => ['id'=>$account->id, 'username' => $account->username]], 200);
+                } else {
+                    return response()->json(['message' => 'username or Password is not correct (Password)'], 401);
                 }
             }
         } catch (\Throwable $th) {

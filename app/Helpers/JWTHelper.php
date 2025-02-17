@@ -23,7 +23,7 @@ class JWTHelper
     public static function verifyToken($token)
     {
         try {
-            return (array) JWT::decode($token, new Key(self::$secretKey, self::$algorithm));
+            return (array) JWT::decode($token, new Key(env('JWT_SECRET'), self::$algorithm));
         } catch (\Exception $e) {
             return null; // Trả về null nếu token không hợp lệ
         }

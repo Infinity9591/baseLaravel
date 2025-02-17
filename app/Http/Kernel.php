@@ -14,7 +14,7 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
-//        \App\Http\Middleware\VerifyTokens::class
+//        \App\Http\Middleware\VerifyToken::class
     ];
 
     /**
@@ -33,7 +33,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-//            \App\Http\Middleware\VerifyTokens::class
+//            \App\Http\Middleware\VerifyToken::class
 
         ],
     ];
@@ -46,7 +46,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
-        'verifyToken' => \App\Http\Middleware\VerifyTokens::class,
+        'verifyToken' => \App\Http\Middleware\VerifyToken::class,
 
     ];
 }
